@@ -8,7 +8,7 @@ execute 'update' do
   action :run
 end
 
-remote_file node['filebeat']['remotefile'] do
+remote_file node['filebeat']['remote_dir'] do
   source node['filebeat']['remotesource']
   action :create_if_missing
 end
