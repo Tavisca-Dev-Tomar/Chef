@@ -1,5 +1,5 @@
 default['filebeat']['source']='/var/log/*.log'
 default['filebeat']['sink']='http://dev-elasticsearch.oski.tavisca.com:9200'
-default['filebeat']['remotefile']='beats/filebeat'
+default['filebeat']['remote_dir']='beats/filebeat'
 default['filebeat']['remotesource']='https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-5.2.2-amd64.deb'
 default['filebeat']['dpkgsource']='beats/filebeat/filebeat-5.2.2-amd64.deb'
