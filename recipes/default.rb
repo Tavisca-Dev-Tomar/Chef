@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: filebeat
+# Cookbook Name:: fb
 # Recipe:: default
 #
-# Copyright 2015, Virender Khatri
+# Copyright 2017, Tavisca, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,20 +16,3 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
-include_recipe 'filebeat::attributes'
-
-include_recipe 'yum-plugin-versionlock::default' if node['platform_family'] == 'rhel'
-
-# install filebeat
-case node['platform']
-when 'windows'
-  include_recipe 'filebeat::install_windows'
-when 'solaris2'
-  include_recipe 'filebeat::install_solaris'
-else
-  include_recipe 'filebeat::install_package'
-end
-
-# configure filebeat
-include_recipe 'filebeat::config'
