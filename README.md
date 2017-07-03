@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # fb Cookbook
 
 TODO: Enter the cookbook description here.
@@ -78,3 +79,7 @@ e.g.
 
 Authors: TODO: List authors
 
+=======
+# Chef
+chef-cookbooks
+>>>>>>> 2a64c5ac0a7d4c611ce9bbfe451cd326c7343550
